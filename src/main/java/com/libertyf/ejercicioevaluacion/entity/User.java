@@ -1,7 +1,7 @@
 package com.libertyf.ejercicioevaluacion.entity;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.io.Serializable;
 
