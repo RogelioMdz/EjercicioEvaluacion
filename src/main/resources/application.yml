@@ -5,7 +5,7 @@ logging:
         web: DEBUG
 spring:
   datasource:
-    url: jdbc:mysql://localhost:8889/ejercicioEvaludacion?useSSL=false&&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/ejercicioEvaludacion?useSSL=false&&serverTimezone=UTC
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver

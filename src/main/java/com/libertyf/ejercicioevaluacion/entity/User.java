@@ -13,19 +13,22 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "gender")
+    @Column(name = "secondaryEmail", nullable = true)
+    private String secondaryEmail;
+
+    @Column(name = "gender", nullable = false)
     private String gender;
 
-    @Column(name = "status")
+    @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "photo")
+    @Column(name = "photo", nullable = true)
     private String photo;
 
 
@@ -76,16 +79,10 @@ public class User implements Serializable {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", gender='" + gender + '\'' +
-                ", status='" + status + '\'' +
-                ", photo='" + photo + '\'' +
-                '}';
+    public String getSecondaryEmail() {
+        return secondaryEmail;
+    }
+    public void setSecondaryEmail(String secondaryEmail) {
+        this.secondaryEmail = secondaryEmail;
     }
 }
